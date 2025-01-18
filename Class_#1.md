@@ -180,8 +180,8 @@ WHERE description = 'Sample description';
 INSERT INTO students (name, id_card, age, email, height, birth_date)
 VALUES
 	('Pepita', '12456643', 27, 'pepis12@gmail.com', 1.50, '2000-01-05'),
-	('Juanito', '12455643', 25, 'juan312@gmail.com', 1.70, '1993-01-10'),
-	('Pepito', '133356643', 22, 'pep2@gmail.com', 1.90, '1996-01-10');
+	('Juanito', '12456643', 25, 'juan312@gmail.com', 1.70, '1993-01-10'),
+	('Pepito', '133356643', 22, 'juan312@gmail.com', 1.90, '1996-01-10');
 
 ```
 
