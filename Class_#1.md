@@ -97,6 +97,15 @@ El objetivo de este comando es crear una nueva base de datos para almacenar info
 ```sql
 CREATE DATABASE coursedb;
 ```
+```sql
+CREATE DATABASE testonedb;
+```
+
+### Eliminar una Base de Datos
+El objetivo de este comando es eliminar una base de datos existente.
+```sql
+DROP DATABASE testonedb;
+```
 
 ### Crear una Tabla
 Este comando crea una tabla llamada students con campos para almacenar información personal y académica de los estudiantes. Los campos incluyen identificador único, nombre, identificación, edad, correo electrónico, estatura y fecha de nacimiento.
@@ -113,8 +122,58 @@ CREATE TABLE students (
 );
 ```
 
+```sql
+CREATE TABLE test_one (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    description VARCHAR(100) NOT NULL
+);
+```
+
+### Cambiar el Nombre de la Tabla
+Para cambiar el nombre de la tabla test_one, utiliza el comando RENAME TABLE:
+```sql
+RENAME TABLE test_one TO test_two;
+```
+
+### Agregar una Nueva Columna
+Para agregar una nueva columna, por ejemplo, created_at de tipo DATETIME, utiliza el comando ALTER TABLE:
+```sql
+ALTER TABLE test_two
+ADD created_at DATETIME;
+```
+### Editar una Columna
+Para modificar la columna description, por ejemplo, aumentando su longitud a 200 caracteres, usa:
+```sql
+ALTER TABLE test_two
+MODIFY description VARCHAR(200) NOT NULL;
+```
+### Eliminar una Columna
+Para eliminar una columna, como created_at, utiliza el siguiente comando:
+```sql
+ALTER TABLE test_two
+DROP COLUMN created_at;
+```
+
 ### Insertar Datos en una Tabla
 El propósito de este comando es agregar registros a la tabla students con información específica sobre cada estudiante.
+```sql
+INSERT INTO test_two (description) 
+VALUES ('Sample description');
+```
+
+### Eliminar tabla
+El propósito de este comando es eliminar la tabla test_two, utiliza el comando DROP TABLE:
+```sql
+DROP TABLE test_two;
+```
+Nota: Da error ya que existe un registro, debe estar la tabla limpia de registros para poder eliminarla
+
+### Eliminar registro
+Para eliminar el registro que se insertó en la tabla test_two, utiliza el comando DELETE con una condición que identifique el registro único. Por ejemplo:
+```sql
+DELETE FROM test_two 
+WHERE description = 'Sample description';
+```
 
 ```sql
 INSERT INTO students (name, id_card, age, email, height, birth_date)
