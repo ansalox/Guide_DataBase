@@ -76,7 +76,7 @@ Características principales:
 Ejemplo práctico:
 En una red social, los datos de un usuario pueden estar en formato JSON:
 
-```sql
+```javascript
 {
   "nombre": "Juan",
   "edad": 25,
