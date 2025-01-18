@@ -1,4 +1,4 @@
-# Guía Completa: Introducción a Bases de Datos
+# Gestión de Bases de Datos Clase 1: Introducción a Bases de Datos
 
 ## ¿Qué es una Base de Datos?
 
@@ -95,44 +95,44 @@ Las bases de datos NoSQL ofrecen un enfoque más flexible, ideal para datos **no
 ### Crear una Base de Datos
 El objetivo de este comando es crear una nueva base de datos para almacenar información de manera organizada.
 ```sql
-CREATE DATABASE cursodb;
-
-
-```sql
-CREATE DATABASE cursodb
+CREATE DATABASE coursedb;
 ```
 
-(explica chatgpt aqui cimpleto el objetivo de crear la tabla)
+### Crear una Tabla
+Este comando crea una tabla llamada students con campos para almacenar información personal y académica de los estudiantes. Los campos incluyen identificador único, nombre, identificación, edad, correo electrónico, estatura y fecha de nacimiento.
 
 ```sql
-CREATE TABLE estudiantes (
-	id_estudiante INT AUTO_INCREMENT PRIMARY KEY,
-	nombre VARCHAR(50) NOT NULL,
-	cedula VARCHAR(10) UNIQUE NOT NULL,
-	edad INT NOT NULL,
-	correo VARCHAR(60) UNIQUE NOT NULL,
-	estatura DECIMAL NOT NULL,
-	fecha_nacimiento DATE
-	)
+CREATE TABLE students (
+	id_student INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	id_card VARCHAR(10) UNIQUE NOT NULL,
+	age INT NOT NULL,
+	email VARCHAR(60) UNIQUE NOT NULL,
+	height DECIMAL NOT NULL,
+	birth_date DATE
+);
 ```
 
-(explica chatgpt aqui cimpleto el objetivo de isnertar datos)
+### Insertar Datos en una Tabla
+El propósito de este comando es agregar registros a la tabla students con información específica sobre cada estudiante.
 
 ```sql
-INSERT INTO estudiantes (nombre, cedula, edad, correo, estatura, fecha_nacimiento )
-	VALUES
+INSERT INTO students (name, id_card, age, email, height, birth_date)
+VALUES
 	('Pepita', '12456643', 27, 'pepis12@gmail.com', 1.50, '2000-01-05'),
 	('Juanito', '12455643', 25, 'juan312@gmail.com', 1.70, '1993-01-10'),
-	('Pepito', '133356643', 22, 'Pep2@gmail.com', 1.90, '1996-01-10')
+	('Pepito', '133356643', 22, 'pep2@gmail.com', 1.90, '1996-01-10');
+
 ```
 
-NOTA SE PRESENTA MENSAJE DE DATOS TRUNCADOS Y HACE APROXIMACIONES DEBID A QUE NO SE INDICO EN DECIMAL EL ALCANCE Y LOS DIGITOS
+Nota: Es importante asegurarse de que los valores insertados en el campo height cumplan con el formato especificado (DECIMAL(4,2)) para evitar problemas de truncamiento.
 
-(explica chatgpt aqui cimpleto el objetivo de editar tabla la tabla)
-SOLUCION
+Solución para el Error de Truncamiento
+Si al insertar datos en la tabla ocurre un error de truncamiento en el campo height, se puede solucionar modificando la definición de la columna para especificar correctamente el formato decimal.
+
 ```sql
-ALTER TABLE estudiantes 
-MODIFY estatura DECIMAL(4,2) NOT NULL;
+ALTER TABLE students 
+MODIFY height DECIMAL(4,2) NOT NULL;
 ```
 
 
