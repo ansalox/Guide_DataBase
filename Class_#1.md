@@ -175,6 +175,7 @@ DELETE FROM test_two
 WHERE description = 'Sample description';
 ```
 
+### Insertar estudiantes
 ```sql
 INSERT INTO students (name, id_card, age, email, height, birth_date)
 VALUES
