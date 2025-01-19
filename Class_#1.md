@@ -185,7 +185,7 @@ VALUES
 
 ```
 
-Nota: Es importante asegurarse de que los valores insertados en el campo height cumplan con el formato especificado (DECIMAL(4,2)) para evitar problemas de truncamiento.
+Nota: Es importante asegurarse de que los valores insertados en el campo height cumplan con el formato especificado (DECIMAL(4,2)) para evitar problemas de truncamiento. (Siempre el primer numero debe ser mayor al segundo)
 
 ### Solución para el Error de Truncamiento:
 Si al insertar datos en la tabla ocurre un error de truncamiento en el campo height, se puede solucionar modificando la definición de la columna para especificar correctamente el formato decimal.
