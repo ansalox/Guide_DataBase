@@ -8,13 +8,7 @@ Renombrar la Tabla estudiantes a users
 RENAME TABLE estudiantes TO users;
 ```
 
-Agregar los campos address y gender:
 
-```sql
-ALTER TABLE users
-ADD address VARCHAR(255),
-ADD gender ENUM('male', 'female', 'other');
-```
 
 -- Crear la tabla areas
 ```sql
