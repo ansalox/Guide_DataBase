@@ -59,7 +59,7 @@ ADD FOREIGN KEY (id_courses) REFERENCES courses(id_courses) ON DELETE SET NULL;
 ```
 -- Insertar nuevos registros en la tabla users con personajes de One Piece
 ```sql
-INSERT INTO users (name, id_card, age, email, height, birth_date, address, gender, id_courses) VALUES
+INSERT INTO users (name, id_card, age, email, height, birth_date, id_courses) VALUES
 ('Monkey D. Luffy',      'OP0001', 19, 'luffy@onepiece.com',    1.72, '2006-05-05',  NULL, 'male',   1),
 ('Roronoa Zoro',         'OP0002', 21, 'zoro@onepiece.com',     1.78, '2002-11-11',  NULL, 'male',   2),
 ('Nami',                 'OP0003', 20, 'nami@onepiece.com',     1.70, '2003-07-03',  NULL, 'female', 3),
