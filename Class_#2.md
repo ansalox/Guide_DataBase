@@ -13,7 +13,7 @@ RENAME TABLE estudiantes TO users;
 -- Crear la tabla areas
 ```sql
 CREATE TABLE areas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_area INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT
 );
@@ -21,7 +21,7 @@ CREATE TABLE areas (
 -- Crear la tabla courses
 ```sql
 CREATE TABLE courses (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_courses INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT,
     price DECIMAL(10,2) NOT NULL,
@@ -39,7 +39,7 @@ INSERT INTO areas (name, description) VALUES
 ```
 -- Crear registros en la tabla courses
 ```sql
-INSERT INTO courses (name, description, price, credits, area_id) VALUES
+INSERT INTO courses (name, description, price, credits, id_area) VALUES
 ('JavaScript',        'Introduction to JavaScript for front-end development.',    200.00, 4, 3),
 ('React',             'Advanced course on building front-end applications.',     300.00, 5, 3),
 ('Node.js',           'Back-end development using Node.js and Express.',         250.00, 4, 3),
@@ -54,12 +54,12 @@ INSERT INTO courses (name, description, price, credits, area_id) VALUES
 -- Modificar la tabla users para agregar el campo curso_id y relacionarla con courses
 ```sql
 ALTER TABLE users
-ADD course_id INT,
+ADD id_courses INT,
 ADD FOREIGN KEY (id_courses) REFERENCES courses(id_courses) ON DELETE SET NULL;
 ```
 -- Insertar nuevos registros en la tabla users con personajes de One Piece
 ```sql
-INSERT INTO users (name, id_card, age, email, height, birth_date, address, gender, course_id) VALUES
+INSERT INTO users (name, id_card, age, email, height, birth_date, address, gender, id_courses) VALUES
 ('Monkey D. Luffy',      'OP0001', 19, 'luffy@onepiece.com',    1.72, '2006-05-05',  NULL, 'male',   1),
 ('Roronoa Zoro',         'OP0002', 21, 'zoro@onepiece.com',     1.78, '2002-11-11',  NULL, 'male',   2),
 ('Nami',                 'OP0003', 20, 'nami@onepiece.com',     1.70, '2003-07-03',  NULL, 'female', 3),
