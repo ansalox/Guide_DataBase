@@ -74,7 +74,7 @@ INSERT INTO users (name, id_card, age, email, height, birth_date, id_courses) VA
 ('Shanks',               'OP0012', 39, 'shanks@onepiece.com',   1.99, '1985-03-09',2),
 ('Buggy',                'OP0013', 37, 'buggy@onepiece.com',    1.92, '1987-08-08',3),
 ('Crocodile',            'OP0014', 46, 'crocodile@onepiece.com',2.53, '1978-09-05',4),
-('Trafalgar D. Water Law','OP0015',26, 'law@onepiece.com',      1.91, '1998-10-06', 5),
+('Trafalgar D. Water Law','OP0015',26, 'law@onepiece.com',      1.91, '1998-10-06',5),
 ('Eustass Kid',          'OP0016', 23, 'kid@onepiece.com',      2.05, '2001-01-10',6),
 ('Killer',               'OP0017', 25, 'killer@onepiece.com',   1.95, '1999-12-25',7),
 ('Donquixote Doflamingo','OP0018', 41, 'doflamingo@onepiece.com',3.05,'1983-10-23',8),
