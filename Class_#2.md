@@ -55,7 +55,7 @@ INSERT INTO courses (name, description, price, credits, area_id) VALUES
 ```sql
 ALTER TABLE users
 ADD course_id INT,
-ADD FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE SET NULL;
+ADD FOREIGN KEY (id_courses) REFERENCES courses(id_courses) ON DELETE SET NULL;
 ```
 -- Insertar nuevos registros en la tabla users con personajes de One Piece
 ```sql
