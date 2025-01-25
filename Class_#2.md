@@ -1,7 +1,7 @@
 
 CLASE 2
 
-Renombrar la Tabla estudiantes a users
+Renombrar la Tabla students a users
 
 
 ```sql
@@ -26,8 +26,8 @@ CREATE TABLE courses (
     description TEXT,
     price DECIMAL(10,2) NOT NULL,
     credits INT NOT NULL,
-    area_id INT NOT NULL,
-    FOREIGN KEY (area_id) REFERENCES areas(id) ON DELETE CASCADE
+    id_area INT NOT NULL,
+    FOREIGN KEY (id_area) REFERENCES areas(id_area) ON DELETE CASCADE
 );
 ```
 -- Crear registros en la tabla areas
