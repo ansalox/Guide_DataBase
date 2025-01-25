@@ -5,7 +5,7 @@ Renombrar la Tabla students a users
 
 
 ```sql
-RENAME TABLE estudiantes TO users;
+RENAME TABLE students TO users;
 ```
 
 
@@ -55,7 +55,7 @@ INSERT INTO courses (name, description, price, credits, id_area) VALUES
 ```sql
 ALTER TABLE users
 ADD id_courses INT,
-ADD FOREIGN KEY (id_courses) REFERENCES courses(id_courses) ON DELETE SET NULL;
+ADD FOREIGN KEY (id_courses) REFERENCES courses(id_courses) ON DELETE CASCADE;
 ```
 -- Insertar nuevos registros en la tabla users con personajes de One Piece
 ```sql
