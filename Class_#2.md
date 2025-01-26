@@ -8,7 +8,10 @@ Renombrar la Tabla students a users
 RENAME TABLE students TO users;
 ```
 
-
+```sql
+ALTER TABLE users
+CHANGE id_student id_user INT AUTO_INCREMENT PRIMARY KEY;
+```
 
 -- Crear la tabla areas
 ```sql
